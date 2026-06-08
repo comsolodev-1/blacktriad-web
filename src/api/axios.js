@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'http://localhost:8080/api/v1',
+  baseURL: 'https://blacktriad-api-production.up.railway.app/',
 })
 
 api.interceptors.request.use((config) => {
