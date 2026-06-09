@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'https://blacktriad-api-production.up.railway.app/',
+  baseURL: 'https://blacktriad-api-production.up.railway.app/api/v1/',
 })
 
 api.interceptors.request.use((config) => {
@@ -22,7 +22,7 @@ api.interceptors.response.use(
       if (refreshToken) {
         try {
           const res = await axios.post(
-            'http://localhost:8080/api/v1/auth/refresh',
+            'https://blacktriad-api-production.up.railway.app/api/v1/auth/refresh',
             { refreshToken }
           )
           const data = res.data
