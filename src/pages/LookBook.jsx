@@ -131,7 +131,7 @@ export default function Lookbook() {
         {entries.map(entry => (
           <div key={entry.id} className="card" style={{ padding: '0', overflow: 'hidden' }}>
             {entry.photoPath ? (
-              <img src={`http://localhost:8080${entry.photoPath}`} alt="look"
+              <img src={`https://blacktriad-api-production.up.railway.app${entry.photoPath}`} alt="look"
                 style={{ width: '100%', height: '220px', objectFit: 'cover' }} />
             ) : (
               <div style={{
