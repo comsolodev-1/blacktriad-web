@@ -1,16 +1,51 @@
-# React + Vite
+# BlackTriad Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React web application for the BlackTriad wardrobe management system.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 18
+- Vite
+- Axios
+- React Router
+- Vercel (deployment)
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Dark minimal UI
+- JWT authentication with auto refresh
+- Wardrobe management with category filters
+- Outfit combo builder
+- Wear log tracking
+- Lookbook with photo upload
+- Bin with restore and permanent delete
+- Admin panel (ADMIN/MODERATOR only)
 
-## Expanding the ESLint configuration
+## Running Locally
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+# Clone the repo
+git clone https://github.com/comsolodev-1/blacktriad-web.git
+
+# Install dependencies
+npm install
+
+# Update API URL in src/api/axios.js to your local or Railway URL
+
+# Run
+npm run dev
+```
+
+## Environment
+
+Update `src/api/axios.js` with your API base URL:
+
+```js
+const api = axios.create({
+  baseURL: 'https://your-api-url/api/v1/',
+})
+```
+
+## License
+
+Copyright © 2026 Reyny Mxrk. All rights reserved.
